@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Rubik', sans-serif;
+}
+
+.banner-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* padding: 8rem 0; */
+  min-height: 80vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.navigation {
+  position: absolute;
+  width: 100%;
+  top: 3rem;
+  right: 1rem;
+}
+
+.navigation.active {
+  padding: 3rem 0;
+  background-color: #fff;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  top: 0rem;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navigation.active ul {
+  justify-content: center;
+}
+
+.navigation.active ul li a {
+  color: #091b29;
+}
+
+.navigation ul {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.navigation ul li {
+  margin-right: 3rem;
+}
+
+.navigation ul li a {
+  color: #fff;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-family: 'Rubik', sans-serif;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+.navigation ul li a:hover {
+  color: #ff4646;
+}
+
+.hero {
+  text-align: center;
+  font-family: serif;
+}
+
+.hero h1 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Rubik', sans-serif;
+  color: #fff;
+}
+.hero p {
+  margin: 1rem 0;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.7rem;
+  font-family: 'Rubik', sans-serif;
+}
+
+.hero .btn {
+  border: 0;
+  outline: 0 !important;
+  padding: 1.3rem 3rem;
+  border-radius: 4px;
+  margin: 0 5px;
+  font-family: 'Rubik', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-yellow {
+  background-color: #ffc107;
+  color: #000;
+}
+.btn-outline-yellow {
+  border: 1px solid #ffc107 !important;
+  background-color: transparent;
+  color: #ffc107;
+}
+
+.btn-outline-yellow:hover {
+  background-color: #ffc107;
+  color: #091b29;
+}
+.other-section {
+  padding: 8rem 3rem;
+}
+
+.other-section h2 {
+  color: #ff4646;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.other-section p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-toggler {
+  display: none;
+}
+
+.top-btn {
+  display: inline-block;
+  outline: 0 !important;
+  border: 0 !important;
+  background-color: #ffc107;
+  color: #091b29;
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  cursor: pointer;
+  font-size: 3rem;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 0.3s ease;
+}
+.top-btn.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 99;
+}
+
+.top-btn:hover {
+  background-color: #ff4646;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .navigation {
+    display: none;
+  }
+  .mobile-menu {
+    display: block !important;
+    position: fixed;
+    min-height: 100vh;
+    width: 230px !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    transform: translateX(230px);
+    transition: transform 0.3s linear;
+  }
+
+  .mobile-menu.active {
+    z-index: 99999;
+    transform: translateX(0px);
+  }
+
+  .mobile-toggler {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .mobile-toggler.active {
+    position: fixed;
+    z-index: 9;
+    background-color: #fff;
+    width: 6rem;
+    height: 6rem;
+    line-height: 6rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-toggler.active .bx {
+    color: #661090 !important;
+  }
+
+  .mobile-toggler .bx {
+    color: #fff;
+    font-size: 4rem;
+  }
+
+  .mobile-menu {
+    padding-top: 8rem;
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-menu ul {
+    list-style: none;
+  }
+
+  .mobile-menu ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 1.5rem 2rem;
+    color: #091b29;
+    font-weight: 600;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+  }
+
+  .mobile-menu ul li a.active {
+    color: #fff;
+    background-color: #661090;
+  }
+  .mobile-menu .nav-close-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .mobile-menu .nav-close-btn .bx {
+    font-size: 4rem;
+  }
+}
