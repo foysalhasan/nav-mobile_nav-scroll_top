@@ -109,18 +109,18 @@ body {
 }
 
 .btn-yellow {
-  background-color: #ffc107;
-  color: #000;
+  background-color: #ff4646;
+  color: #fff;
 }
 .btn-outline-yellow {
-  border: 1px solid #ffc107 !important;
+  border: 1px solid #ff4646 !important;
   background-color: transparent;
-  color: #ffc107;
+  color: #fff;
 }
 
 .btn-outline-yellow:hover {
-  background-color: #ffc107;
-  color: #091b29;
+  background-color: #ff4646;
+  color: #fff;
 }
 .other-section {
   padding: 8rem 3rem;
