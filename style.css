@@ -43,6 +43,16 @@ body {
   left: 0;
   right: 0;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.3s linear both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .navigation.active ul {
